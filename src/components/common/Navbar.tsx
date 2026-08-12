@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
-import { Phone, Mail, Clock, MessageSquare, Search, Menu, X, ShieldAlert, Cpu, ChevronDown, ArrowRight } from 'lucide-react';
+import { Phone, Mail, Clock, MessageSquare, Search, Menu, X, ShieldAlert, Cpu, ChevronDown, ArrowRight, User } from 'lucide-react';
 import { COMPANY_CONFIG } from '../../config/company.config';
 import { useRfq } from '../../context/RfqContext';
+import { useClientAuth } from '../../context/ClientAuthContext';
 
 interface NavbarProps {
   activeTab: string;
@@ -13,6 +14,7 @@ export const Navbar: React.FC<NavbarProps> = ({ activeTab, setActiveTab }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [productsDropdownOpen, setProductsDropdownOpen] = useState(false);
   const { openQuickRfqModal, leads } = useRfq();
+  const { currentUser } = useClientAuth();
 
   const newLeadsCount = leads.filter((l) => l.status === 'New').length;
 
@@ -53,7 +55,22 @@ export const Navbar: React.FC<NavbarProps> = ({ activeTab, setActiveTab }) => {
             </span>
           </div>
 
-          <div className="flex items-center gap-3 ml-auto">
+          <div className="flex items-center gap-2.5 ml-auto">
+            {/* Client Portal Link */}
+            <button
+              onClick={() => handleNavClick('client')}
+              className={`px-2.5 py-0.5 rounded text-[11px] font-semibold border transition-all flex items-center gap-1.5 ${
+                activeTab === 'client'
+                  ? 'bg-emerald-600 text-white border-emerald-500'
+                  : currentUser
+                  ? 'bg-emerald-950/80 text-emerald-400 border-emerald-500/40 hover:bg-emerald-900'
+                  : 'bg-slate-800 hover:bg-slate-700 text-slate-300 border-slate-700'
+              }`}
+            >
+              <User className="w-3 h-3 text-emerald-400" />
+              <span>{currentUser ? currentUser.companyName : 'Client Portal'}</span>
+            </button>
+
             {/* Direct Admin Portal link badge */}
             <button
               onClick={() => handleNavClick('admin')}

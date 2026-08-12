@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { ToastProvider } from './context/ToastContext';
 import { RfqProvider } from './context/RfqContext';
+import { ClientAuthProvider } from './context/ClientAuthContext';
 import { Navbar } from './components/common/Navbar';
 import { Footer } from './components/common/Footer';
 import { FloatingWhatsAppButton } from './components/common/WhatsAppButton';
@@ -15,6 +16,7 @@ import { AboutUsPage } from './pages/AboutUs';
 import { RfqPage } from './pages/RfqPage';
 import { ContactUsPage } from './pages/ContactUs';
 import { AdminDashboardPage } from './pages/AdminDashboard';
+import { ClientPortalPage } from './pages/ClientPortal';
 import { PrivacyPolicyPage } from './pages/PrivacyPolicy';
 import { TermsConditionsPage } from './pages/TermsConditions';
 import { NotFoundPage } from './pages/NotFound';
@@ -84,6 +86,8 @@ export function App() {
         return <ContactUsPage />;
       case 'admin':
         return <AdminDashboardPage />;
+      case 'client':
+        return <ClientPortalPage setActiveTab={handleTabChange} />;
       case 'privacy':
         return <PrivacyPolicyPage />;
       case 'terms':
@@ -95,19 +99,21 @@ export function App() {
 
   return (
     <ToastProvider>
-      <RfqProvider>
-        <div className="min-h-screen bg-slate-950 font-sans flex flex-col justify-between selection:bg-blue-600 selection:text-white">
-          <Navbar activeTab={activeTab} setActiveTab={handleTabChange} />
+      <ClientAuthProvider>
+        <RfqProvider>
+          <div className="min-h-screen bg-slate-950 font-sans flex flex-col justify-between selection:bg-blue-600 selection:text-white">
+            <Navbar activeTab={activeTab} setActiveTab={handleTabChange} />
 
-          <main className="flex-1">{renderContent()}</main>
+            <main className="flex-1">{renderContent()}</main>
 
-          <Footer setActiveTab={handleTabChange} />
+            <Footer setActiveTab={handleTabChange} />
 
-          {/* Global Floating Actions & Modals */}
-          <FloatingWhatsAppButton />
-          <QuickRfqModal />
-        </div>
-      </RfqProvider>
+            {/* Global Floating Actions & Modals */}
+            <FloatingWhatsAppButton />
+            <QuickRfqModal />
+          </div>
+        </RfqProvider>
+      </ClientAuthProvider>
     </ToastProvider>
   );
 }

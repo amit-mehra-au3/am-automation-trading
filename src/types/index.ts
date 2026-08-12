@@ -114,6 +114,17 @@ export interface RfqSubmission {
   quotedAmount?: string;
 }
 
+export interface ClientUser {
+  id: string;
+  fullName: string;
+  companyName: string;
+  email: string;
+  phone: string;
+  industry?: string;
+  gstin?: string;
+  createdAt: string;
+}
+
 export interface ProductFilterState {
   searchQuery: string;
   selectedCategory: string;
