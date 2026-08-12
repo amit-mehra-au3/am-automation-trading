@@ -214,20 +214,6 @@ export const AdminDashboardPage: React.FC = () => {
                 <span>{isLoggingIn ? 'Verifying Credentials...' : 'Sign In to Dashboard'}</span>
               </button>
             </form>
-
-            {/* Helper Credential Hint Box */}
-            <div className="bg-slate-950/80 border border-slate-800 p-4 rounded-xl space-y-2 text-[11px] text-slate-400">
-              <div className="flex items-center justify-between text-slate-300 font-bold border-b border-slate-800 pb-1">
-                <span>Default Admin Passcode</span>
-                <span className="text-blue-400 font-mono text-[10px]">Security Notice</span>
-              </div>
-              <p>
-                Email: <strong className="text-white font-mono">{COMPANY_CONFIG.adminAuth.email}</strong>
-              </p>
-              <p>
-                Password: <strong className="text-emerald-400 font-mono">{COMPANY_CONFIG.adminAuth.defaultPassword}</strong>
-              </p>
-            </div>
           </div>
         </div>
       </>
