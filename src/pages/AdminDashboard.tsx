@@ -163,7 +163,7 @@ export const AdminDashboardPage: React.FC = () => {
             )}
 
             {/* Login Form */}
-            <form onSubmit={handleLoginSubmit} className="space-y-4">
+            <form onSubmit={handleLoginSubmit} autoComplete="off" className="space-y-4">
               <div>
                 <label className="block text-xs font-semibold text-slate-300 mb-1">
                   Admin Email Address
@@ -172,6 +172,9 @@ export const AdminDashboardPage: React.FC = () => {
                   <Mail className="w-4 h-4 absolute left-3 text-slate-500" />
                   <input
                     type="email"
+                    name="admin_email_no_autofill"
+                    id="admin_email_no_autofill"
+                    autoComplete="off"
                     required
                     value={loginEmail}
                     onChange={(e) => setLoginEmail(e.target.value)}
