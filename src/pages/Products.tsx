@@ -7,6 +7,8 @@ import type { Product, ProductFilterState } from '../types';
 import { useRfq } from '../context/RfqContext';
 import { SeoHead } from '../components/common/SeoHead';
 
+import { getImageUrl } from '../utils/imageUrl';
+
 interface ProductsPageProps {
   onSelectProduct: (product: Product) => void;
   selectedCategorySlug?: string;
@@ -312,7 +314,7 @@ export const ProductsPage: React.FC<ProductsPageProps> = ({
                       {/* Product Image & Badges */}
                       <div className="relative h-48 bg-slate-950 overflow-hidden flex items-center justify-center">
                         <img
-                          src={product.imageUrl}
+                          src={getImageUrl(product.imageUrl)}
                           alt={product.name}
                           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                         />

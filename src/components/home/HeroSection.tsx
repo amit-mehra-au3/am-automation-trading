@@ -3,6 +3,8 @@ import { ArrowRight, ShieldCheck, Cpu, Zap, Settings, CheckCircle } from 'lucide
 import { COMPANY_CONFIG } from '../../config/company.config';
 import { useRfq } from '../../context/RfqContext';
 
+import { getImageUrl } from '../../utils/imageUrl';
+
 interface HeroProps {
   setActiveTab: (tab: string) => void;
 }
@@ -111,7 +113,7 @@ export const HeroSection: React.FC<HeroProps> = ({ setActiveTab }) => {
           <div className="lg:col-span-5 relative">
             <div className="relative rounded-2xl overflow-hidden border border-slate-800 bg-slate-900 shadow-2xl group">
               <img
-                src="/images/hero_automation.jpg"
+                src={getImageUrl('/images/hero_automation.jpg')}
                 alt="AM Automation Trading Industrial Automation Control Panel"
                 className="w-full h-[380px] sm:h-[440px] object-cover group-hover:scale-105 transition-transform duration-500"
               />

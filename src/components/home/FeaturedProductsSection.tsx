@@ -4,6 +4,8 @@ import { PRODUCTS_DATA } from '../../data/products.data';
 import { Product } from '../../types';
 import { useRfq } from '../../context/RfqContext';
 
+import { getImageUrl } from '../../utils/imageUrl';
+
 interface FeaturedProductsProps {
   onSelectProduct: (product: Product) => void;
   setActiveTab: (tab: string) => void;
@@ -58,7 +60,7 @@ export const FeaturedProductsSection: React.FC<FeaturedProductsProps> = ({
               {/* Product Image & Badges */}
               <div className="relative h-48 bg-slate-900 overflow-hidden">
                 <img
-                  src={product.imageUrl}
+                  src={getImageUrl(product.imageUrl)}
                   alt={product.name}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-90 group-hover:opacity-100"
                 />

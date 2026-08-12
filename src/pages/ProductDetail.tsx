@@ -6,6 +6,8 @@ import { useRfq } from '../context/RfqContext';
 import { COMPANY_CONFIG } from '../config/company.config';
 import { SeoHead } from '../components/common/SeoHead';
 
+import { getImageUrl } from '../utils/imageUrl';
+
 interface ProductDetailProps {
   product: Product;
   onBack: () => void;
@@ -63,7 +65,7 @@ export const ProductDetailPage: React.FC<ProductDetailProps> = ({
             <div className="lg:col-span-5 space-y-4">
               <div className="relative bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden shadow-2xl p-4">
                 <img
-                  src={product.imageUrl}
+                  src={getImageUrl(product.imageUrl)}
                   alt={product.name}
                   className="w-full h-80 sm:h-96 object-cover rounded-xl"
                 />
@@ -262,7 +264,7 @@ export const ProductDetailPage: React.FC<ProductDetailProps> = ({
                   >
                     <div className="h-40 bg-slate-950 rounded-lg overflow-hidden relative">
                       <img
-                        src={rel.imageUrl}
+                        src={getImageUrl(rel.imageUrl)}
                         alt={rel.name}
                         className="w-full h-full object-cover group-hover:scale-105 transition-transform"
                       />

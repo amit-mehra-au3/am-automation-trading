@@ -3,6 +3,8 @@ import { ArrowRight, MessageSquare, Layers } from 'lucide-react';
 import { CATEGORIES_DATA } from '../../data/categories.data';
 import { useRfq } from '../../context/RfqContext';
 
+import { getImageUrl } from '../../utils/imageUrl';
+
 interface Props {
   setActiveTab: (tab: string) => void;
   onSelectCategory?: (categorySlug: string) => void;
@@ -59,7 +61,7 @@ export const ProductCategoryGrid: React.FC<Props> = ({ setActiveTab, onSelectCat
               {/* Image & Count Badge */}
               <div className="relative h-44 overflow-hidden bg-slate-950">
                 <img
-                  src={category.imageUrl}
+                  src={getImageUrl(category.imageUrl)}
                   alt={category.name}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-90 group-hover:opacity-100"
                 />
