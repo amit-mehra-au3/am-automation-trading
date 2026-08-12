@@ -1,10 +1,11 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useEffect } from 'react';
 import { useRfq } from '../context/RfqContext';
 import { LeadStatusBadge } from '../components/common/LeadStatusBadge';
 import type { LeadStatus, RfqSubmission } from '../types';
 import { SeoHead } from '../components/common/SeoHead';
 import { CATEGORIES_DATA } from '../data/categories.data';
 import { PRODUCTS_DATA } from '../data/products.data';
+import { COMPANY_CONFIG } from '../config/company.config';
 import {
   Cpu,
   Search,
@@ -20,11 +21,30 @@ import {
   Layers,
   Users,
   X,
-  ExternalLink
+  Lock,
+  Mail,
+  Key,
+  Eye,
+  EyeOff,
+  LogOut,
+  ShieldCheck,
+  AlertCircle
 } from 'lucide-react';
 
 export const AdminDashboardPage: React.FC = () => {
   const { leads, updateLeadStatus, deleteLead, exportLeadsCsv } = useRfq();
+
+  // Authentication State
+  const [isAuthenticated, setIsAuthenticated] = useState<boolean>(() => {
+    return localStorage.getItem('am_admin_authenticated') === 'true';
+  });
+
+  // Login Form Local State
+  const [loginEmail, setLoginEmail] = useState<string>(COMPANY_CONFIG.adminAuth.email);
+  const [loginPassword, setLoginPassword] = useState<string>('');
+  const [showPassword, setShowPassword] = useState<boolean>(false);
+  const [authError, setAuthError] = useState<string | null>(null);
+  const [isLoggingIn, setIsLoggingIn] = useState<boolean>(false);
 
   const [activeSection, setActiveSection] = useState<'leads' | 'products' | 'categories'>('leads');
   const [selectedStatusFilter, setSelectedStatusFilter] = useState<string>('all');
@@ -35,6 +55,33 @@ export const AdminDashboardPage: React.FC = () => {
   const [modalStatus, setModalStatus] = useState<LeadStatus>('New');
   const [modalNotes, setModalNotes] = useState('');
   const [modalQuotedAmount, setModalQuotedAmount] = useState('');
+
+  const handleLoginSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    setAuthError(null);
+    setIsLoggingIn(true);
+
+    setTimeout(() => {
+      const cleanEmail = loginEmail.trim().toLowerCase();
+      const targetEmail = COMPANY_CONFIG.adminAuth.email.toLowerCase();
+
+      if (cleanEmail === targetEmail && loginPassword === COMPANY_CONFIG.adminAuth.defaultPassword) {
+        localStorage.setItem('am_admin_authenticated', 'true');
+        setIsAuthenticated(true);
+        setAuthError(null);
+      } else {
+        setAuthError('Invalid admin email or password. Please check your credentials.');
+      }
+      setIsLoggingIn(false);
+    }, 400);
+  };
+
+  const handleLogout = () => {
+    localStorage.removeItem('am_admin_authenticated');
+    setIsAuthenticated(false);
+    setLoginPassword('');
+    setAuthError(null);
+  };
 
   // Filtered Leads
   const filteredLeads = useMemo(() => {
@@ -78,22 +125,134 @@ export const AdminDashboardPage: React.FC = () => {
     }
   };
 
+  // -------------------------------------------------------------
+  // RENDER 1: UNAUTHENTICATED LOGIN SCREEN
+  // -------------------------------------------------------------
+  if (!isAuthenticated) {
+    return (
+      <>
+        <SeoHead
+          title="Admin Login | AM Automation Trading"
+          description="Secure Administrator Login Gateway for AM Automation Trading."
+        />
+
+        <div className="bg-slate-950 text-slate-100 min-h-screen flex items-center justify-center p-4 py-16 relative overflow-hidden">
+          {/* Background Technical Grid Glow */}
+          <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-blue-600/10 rounded-full blur-3xl pointer-events-none" />
+
+          <div className="max-w-md w-full bg-slate-900 border border-slate-800 rounded-2xl p-8 space-y-6 shadow-2xl relative z-10">
+            {/* Header */}
+            <div className="text-center space-y-2">
+              <div className="w-12 h-12 bg-blue-600/15 border border-blue-500/30 rounded-xl text-blue-400 flex items-center justify-center mx-auto mb-3">
+                <Lock className="w-6 h-6" />
+              </div>
+              <h1 className="text-xl font-extrabold text-white tracking-tight">
+                AM Automation Admin Portal
+              </h1>
+              <p className="text-xs text-slate-400">
+                Sign in with your official administrator credentials to manage B2B RFQ leads and catalog products.
+              </p>
+            </div>
+
+            {/* Error Banner */}
+            {authError && (
+              <div className="bg-red-950/60 border border-red-500/40 p-3.5 rounded-xl text-xs text-red-300 flex items-start gap-2.5">
+                <AlertCircle className="w-4 h-4 text-red-400 shrink-0 mt-0.5" />
+                <span>{authError}</span>
+              </div>
+            )}
+
+            {/* Login Form */}
+            <form onSubmit={handleLoginSubmit} className="space-y-4">
+              <div>
+                <label className="block text-xs font-semibold text-slate-300 mb-1">
+                  Admin Email Address
+                </label>
+                <div className="relative flex items-center">
+                  <Mail className="w-4 h-4 absolute left-3 text-slate-500" />
+                  <input
+                    type="email"
+                    required
+                    value={loginEmail}
+                    onChange={(e) => setLoginEmail(e.target.value)}
+                    placeholder="amautomationtrading@gmail.com"
+                    className="w-full bg-slate-950 border border-slate-700 rounded-xl pl-9 pr-3 py-2.5 text-xs text-white placeholder-slate-500 focus:outline-none focus:border-blue-500"
+                  />
+                </div>
+              </div>
+
+              <div>
+                <label className="block text-xs font-semibold text-slate-300 mb-1">
+                  Admin Password
+                </label>
+                <div className="relative flex items-center">
+                  <Key className="w-4 h-4 absolute left-3 text-slate-500" />
+                  <input
+                    type={showPassword ? 'text' : 'password'}
+                    required
+                    value={loginPassword}
+                    onChange={(e) => setLoginPassword(e.target.value)}
+                    placeholder="Enter your password"
+                    className="w-full bg-slate-950 border border-slate-700 rounded-xl pl-9 pr-10 py-2.5 text-xs text-white placeholder-slate-500 focus:outline-none focus:border-blue-500"
+                  />
+                  <button
+                    type="button"
+                    onClick={() => setShowPassword(!showPassword)}
+                    className="absolute right-3 text-slate-400 hover:text-white"
+                  >
+                    {showPassword ? <EyeOff className="w-4 h-4" /> : <Eye className="w-4 h-4" />}
+                  </button>
+                </div>
+              </div>
+
+              <button
+                type="submit"
+                disabled={isLoggingIn}
+                className="w-full bg-blue-600 hover:bg-blue-500 text-white font-bold text-xs py-3.5 rounded-xl shadow-lg shadow-blue-900/40 transition-all flex items-center justify-center gap-2"
+              >
+                <ShieldCheck className="w-4 h-4" />
+                <span>{isLoggingIn ? 'Verifying Credentials...' : 'Sign In to Dashboard'}</span>
+              </button>
+            </form>
+
+            {/* Helper Credential Hint Box */}
+            <div className="bg-slate-950/80 border border-slate-800 p-4 rounded-xl space-y-2 text-[11px] text-slate-400">
+              <div className="flex items-center justify-between text-slate-300 font-bold border-b border-slate-800 pb-1">
+                <span>Default Admin Passcode</span>
+                <span className="text-blue-400 font-mono text-[10px]">Security Notice</span>
+              </div>
+              <p>
+                Email: <strong className="text-white font-mono">{COMPANY_CONFIG.adminAuth.email}</strong>
+              </p>
+              <p>
+                Password: <strong className="text-emerald-400 font-mono">{COMPANY_CONFIG.adminAuth.defaultPassword}</strong>
+              </p>
+            </div>
+          </div>
+        </div>
+      </>
+    );
+  }
+
+  // -------------------------------------------------------------
+  // RENDER 2: AUTHENTICATED ADMIN DASHBOARD
+  // -------------------------------------------------------------
   return (
     <>
       <SeoHead
         title="Admin Portal | AM Automation Trading"
-        description="B2B Lead Management Prototype for RFQs, Customer Enquiries, and Product Administration."
+        description="B2B Lead Management Portal for RFQs, Customer Enquiries, and Product Administration."
       />
 
       <div className="bg-slate-950 text-slate-100 min-h-screen pb-20">
         {/* Header */}
-        <div className="bg-slate-900 border-b border-slate-800 py-8 px-4 sm:px-6">
+        <div className="bg-slate-900 border-b border-slate-800 py-6 px-4 sm:px-6">
           <div className="max-w-7xl mx-auto flex flex-col md:flex-row md:items-center justify-between gap-4">
             <div>
               <div className="flex items-center gap-2 mb-1">
                 <Cpu className="w-5 h-5 text-blue-400" />
                 <span className="text-xs font-bold text-blue-400 uppercase tracking-widest">
-                  MERN Architecture Ready Lead Portal
+                  Authenticated Admin Portal
                 </span>
               </div>
               <h1 className="text-2xl font-extrabold text-white tracking-tight">
@@ -101,13 +260,27 @@ export const AdminDashboardPage: React.FC = () => {
               </h1>
             </div>
 
-            <div className="flex items-center gap-3">
+            <div className="flex flex-wrap items-center gap-3">
+              <div className="bg-slate-950 px-3 py-1.5 rounded-lg border border-slate-800 text-xs text-slate-300 flex items-center gap-2">
+                <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+                <span>Logged in as: <strong className="text-white font-mono">{COMPANY_CONFIG.adminAuth.email}</strong></span>
+              </div>
+
               <button
                 onClick={exportLeadsCsv}
-                className="bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 text-xs font-bold px-4 py-2.5 rounded-lg flex items-center gap-2 transition-colors"
+                className="bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 text-xs font-bold px-4 py-2 rounded-lg flex items-center gap-2 transition-colors"
               >
                 <Download className="w-4 h-4 text-emerald-400" />
-                <span>Export Leads CSV</span>
+                <span>Export CSV</span>
+              </button>
+
+              <button
+                onClick={handleLogout}
+                className="bg-red-600/20 hover:bg-red-600 text-red-300 hover:text-white border border-red-500/30 text-xs font-bold px-4 py-2 rounded-lg flex items-center gap-1.5 transition-colors"
+                title="Log Out of Admin Session"
+              >
+                <LogOut className="w-3.5 h-3.5" />
+                <span>Log Out</span>
               </button>
             </div>
           </div>

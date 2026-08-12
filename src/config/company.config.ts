@@ -16,6 +16,12 @@ export const COMPANY_CONFIG = {
   emailOfficial: "amautomationtrading@gmail.com",
   emailSales: "amautomationtrading@gmail.com",
   emailEnquiry: "amautomationtrading@gmail.com",
+
+  // ADMIN AUTHENTICATION DEFAULTS
+  adminAuth: {
+    email: "amautomationtrading@gmail.com",
+    defaultPassword: "amautomation123"
+  },
   
   // OFFICIAL BUSINESS ADDRESS
   address: {
