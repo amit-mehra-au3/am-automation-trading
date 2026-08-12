@@ -40,7 +40,7 @@ export const AdminDashboardPage: React.FC = () => {
   });
 
   // Login Form Local State
-  const [loginEmail, setLoginEmail] = useState<string>(COMPANY_CONFIG.adminAuth.email);
+  const [loginEmail, setLoginEmail] = useState<string>('');
   const [loginPassword, setLoginPassword] = useState<string>('');
   const [showPassword, setShowPassword] = useState<boolean>(false);
   const [authError, setAuthError] = useState<string | null>(null);
@@ -175,7 +175,7 @@ export const AdminDashboardPage: React.FC = () => {
                     required
                     value={loginEmail}
                     onChange={(e) => setLoginEmail(e.target.value)}
-                    placeholder="amautomationtrading@gmail.com"
+                    placeholder="Enter your admin email"
                     className="w-full bg-slate-950 border border-slate-700 rounded-xl pl-9 pr-3 py-2.5 text-xs text-white placeholder-slate-500 focus:outline-none focus:border-blue-500"
                   />
                 </div>
