@@ -3,155 +3,155 @@ import type { IndustrySector } from '../types';
 export const INDUSTRIES_DATA: IndustrySector[] = [
   {
     id: 'manufacturing',
-    name: 'General Manufacturing',
+    name: 'Manufacturing & General Engineering',
     slug: 'manufacturing',
     iconName: 'Factory',
-    description: 'Precision machining, metal fabrication, component assembly, and heavy industrial production plants.',
+    description: 'Component sourcing and control upgrades for discrete manufacturing, metal fabrication, assembly lines, and industrial machinery.',
     automationBenefits: {
-      machineControl: 'Programmable logic controllers ensure repeatable mechanical sequences and synchronized motion across assembly stations.',
-      productivity: 'Automated loading, indexing, and transfer mechanisms accelerate overall part cycle times.',
-      monitoring: 'HMI dashboards present shift counts, active alarm statuses, and operational parameters for operators.',
-      reliability: 'Solid-state industrial components withstand harsh vibration, dust, and continuous thermal duty.',
-      downtimeReduction: 'Clear LED indicators and HMI fault logging enable maintenance technicians to diagnose sensor or drive faults quickly.',
-      energyEfficiency: 'AC VFD drives regulate motor speed during idle cycles to avoid unnecessary power consumption.'
+      machineControl: 'Consistent machine cycle timing and automated sequence logic',
+      productivity: 'Reduced manual handling with automatic part transfer & positioning',
+      monitoring: 'Real-time fault reporting via HMI screen',
+      reliability: 'Heavy-duty industrial switchgear protecting electrical cabinets',
+      downtimeReduction: 'Fast part replacement using standardized DIN components',
+      energyEfficiency: 'AC drive control on variable-load production machinery'
     },
-    recommendedComponents: ['Modular PLC', 'Heavy Duty VFD', 'Proximity Sensors', 'Operator HMI'],
-    imageUrl: '/images/hero_automation.jpg'
+    recommendedComponents: ['Modular PLC Systems', 'AC Drives / VFDs', 'Industrial Touch HMIs', 'Motor Switchgear', 'Proximity Sensors'],
+    imageUrl: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=800&auto=format&fit=crop'
   },
   {
     id: 'automotive',
-    name: 'Automotive & Ancillaries',
+    name: 'Automotive & Parts Manufacturing',
     slug: 'automotive',
     iconName: 'Car',
-    description: 'Stamping, welding, auto component machining, surface treatment, and sub-assembly automation lines.',
+    description: 'High-precision motion control, robotic cell integration, and sensory feedback for automotive stamping, welding, and component machining.',
     automationBenefits: {
-      machineControl: 'High-speed servo drives deliver exact torque and positioning control for automated robotic transfer and pressing.',
-      productivity: 'Continuous automated part handling reduces manual cycle wait times between welding stations.',
-      monitoring: 'Centralized Ethernet communication streams line status to supervisory control rooms.',
-      reliability: 'IP-rated sensors and rugged electrical switchgear maintain high operational uptime under heavy duty cycles.',
-      downtimeReduction: 'Predictive diagnostic signals alert maintenance teams prior to mechanical component failure.',
-      energyEfficiency: 'Regenerative braking modules capture deceleration energy back into panel bus systems.'
+      machineControl: 'Sub-millimeter positioning accuracy with AC servo drives',
+      productivity: 'Synchronized multi-axis robotic pick and place operation',
+      monitoring: 'Quality pass/fail sensor logging on assembly lines',
+      reliability: 'Industrial Ethernet PROFINET real-time bus connectivity',
+      downtimeReduction: 'Quick plug-and-play servo encoder replacement',
+      energyEfficiency: 'Regenerative braking energy utilization on high-speed axes'
     },
-    recommendedComponents: ['High Precision Servo Systems', 'PROFINET Ethernet Switch', 'Inductive Sensors', 'Multi-Axis PLC'],
-    imageUrl: '/images/servo_motors.jpg'
+    recommendedComponents: ['Precision Servo Motors & Drives', 'Photoelectric Sensors', 'PROFINET Remote I/O', 'Safety Relays'],
+    imageUrl: 'https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?q=80&w=800&auto=format&fit=crop'
   },
   {
     id: 'packaging',
-    name: 'Packaging Machinery',
+    name: 'Packaging & Bottling Machinery',
     slug: 'packaging',
-    iconName: 'Package',
-    description: 'Flow wrapping, pouch filling, carton sealing, labeling, strapping, and palletizing machinery OEMs.',
+    iconName: 'Box',
+    description: 'High-speed registration, rotary wrapping, liquid filling, capping, and pouch-making automation components for OEMs.',
     automationBenefits: {
-      machineControl: 'Synchronized multi-axis servo motion control enables registration mark detection and seamless film feed.',
-      productivity: 'Quick HMI recipe selection enables operators to switch product package sizes with minimal downtime.',
-      monitoring: 'Real-time pack count, speed (packs/min), and seal heater temperature tracking.',
-      reliability: 'Precision fiber-optic photoelectric sensors accurately detect transparent films and foil materials.',
-      downtimeReduction: 'Modular plug-and-play drives and pre-wired terminal blocks simplify field component replacement.',
-      energyEfficiency: 'VFD speed regulation matches conveyor belt feed dynamically to machine intake rates.'
+      machineControl: 'Color mark detection sensors for exact bag cutting alignment',
+      productivity: 'High pouch output speeds via electronic camming servo drives',
+      monitoring: 'Recipe management for fast package size changeover on HMI',
+      reliability: 'Vibration-resistant cage-clamp electrical connections',
+      downtimeReduction: 'Self-diagnostic alarm screens pinpointing sensor misalignments',
+      energyEfficiency: 'Energy-optimized VFD speed control on conveyor belts'
     },
-    recommendedComponents: ['Color Mark Photoelectric Sensor', 'Compact Servo Motor', '7 Inch Touch Panel HMI', 'Temperature Controller'],
-    imageUrl: '/images/hmi_panel.jpg'
+    recommendedComponents: ['High-Speed Transistor Output PLC', 'Color Mark Registration Sensor', 'AC Servo Systems', 'Touch Screens'],
+    imageUrl: 'https://images.unsplash.com/photo-1581092160607-ee22621dd758?q=80&w=800&auto=format&fit=crop'
   },
   {
     id: 'textile',
-    name: 'Textile Machinery',
+    name: 'Textile & Garment Machinery',
     slug: 'textile',
     iconName: 'Scissors',
-    description: 'Spinning, weaving, dyeing, stenter frames, winders, and fabric finishing equipment.',
+    description: 'Reliable speed synchronization and tension regulation for spinning, weaving, stenter, dyeing, and printing machinery.',
     automationBenefits: {
-      machineControl: 'Tension control algorithms in AC drives prevent yarn breakage during high-speed winding and unwinding.',
-      productivity: 'Automated bobbin change and synchronized roller speeds maximize fabric production throughput.',
-      monitoring: 'Display yarn speed (m/min), total length meters, and temperature profiles across heating zones.',
-      reliability: 'Conformal-coated circuit boards protect electronics against lint buildup and humid dye house ambient conditions.',
-      downtimeReduction: 'Rapid troubleshooting through structured HMI alarms for thread break or sensor obstruction.',
-      energyEfficiency: 'High efficiency AC VFDs reduce reactive power consumption across large multi-motor stenter frames.'
+      machineControl: 'PID tension feedback control preventing yarn breakage',
+      productivity: 'Synchronized multi-motor VFD drive groups',
+      monitoring: 'Yarn fault count and speed display on operator console',
+      reliability: 'Dust and lint-sealed IP-rated sensor enclosures',
+      downtimeReduction: 'Quick drive parameter copy via keypad or memory card',
+      energyEfficiency: 'Massive electricity savings on stenter fan and pump drives'
     },
-    recommendedComponents: ['Tension Control VFD', 'Rotary Encoder', 'DIN Power Supply 24V', 'Conformal Coated PLC'],
-    imageUrl: '/images/ac_drives.jpg'
+    recommendedComponents: ['Vector Control AC Drives', 'Yarn Breakage Sensors', 'Temperature Controllers', '24V DC Power Units'],
+    imageUrl: 'https://images.unsplash.com/photo-1581092335397-9583fe92d232?q=80&w=800&auto=format&fit=crop'
   },
   {
     id: 'food-processing',
-    name: 'Food & Beverage Processing',
+    name: 'Food Processing & Beverage',
     slug: 'food-processing',
     iconName: 'Utensils',
-    description: 'Mixing, baking, bottling, canning, dairy processing, freezing, and hygienic packaging lines.',
+    description: 'Hygienic sensing, batch mixing controllers, oven temperature regulators, and conveyor drives for food processing plants.',
     automationBenefits: {
-      machineControl: 'PID loop control accurately regulates oven heating temperatures, liquid dosing, and pump speeds.',
-      productivity: 'Continuous automated batching and liquid filling systems maintain high throughput volume.',
-      monitoring: 'HMI recipe management ensures strict compliance with food processing temperature and timing standards.',
-      reliability: 'Washdown-resistant IP67/IP69K stainless steel sensors and enclosures.',
-      downtimeReduction: 'Intuitive touch controls allow quick machine cleaning routine initiation and diagnostic status checks.',
-      energyEfficiency: 'Variable speed drives optimize refrigeration compressor motor loads according to thermal demand.'
+      machineControl: 'Multi-stage temperature PID control for baking and frying',
+      productivity: 'Automated batching and weighing system integration',
+      monitoring: 'HACCP process temperature and clean-in-place (CIP) logging',
+      reliability: 'Stainless steel proximity and photoelectric sensors',
+      downtimeReduction: 'Washdown-safe control enclosures and components',
+      energyEfficiency: 'PID speed regulation on refrigeration and mixing pumps'
     },
-    recommendedComponents: ['Hygienic Photoelectric Sensor', 'PID Temperature Module', 'Widescreen Touch HMI', 'Stainless Contactor'],
-    imageUrl: '/images/industrial_sensors.jpg'
+    recommendedComponents: ['Stainless Steel Sensors', 'PID Temperature Modules', 'Washdown VFDs', 'IP66 Touch HMIs'],
+    imageUrl: 'https://images.unsplash.com/photo-1581093458791-9f3c3900df4b?q=80&w=800&auto=format&fit=crop'
   },
   {
     id: 'water-wastewater',
-    name: 'Water & Wastewater Management',
+    name: 'Water & Wastewater Treatment',
     slug: 'water-wastewater',
     iconName: 'Droplet',
-    description: 'Pumping stations, RO filtration plants, sewage treatment plants (STP), and municipal water distribution.',
+    description: 'Pump staging controllers, level sensors, pressure transmitters, and VFD flow regulators for WTP, STP, and pumping stations.',
     automationBenefits: {
-      machineControl: 'Multi-pump cascade control automatically turns auxiliary pumps on or off based on pipe header pressure.',
-      productivity: 'Unattended 24/7 automated pumping operations with GSM/Ethernet remote telemetry alert capabilities.',
-      monitoring: 'Continuous tracking of flow rates (m3/hr), pressure levels (bar), tank levels, and motor running hours.',
-      reliability: 'Heavy-duty surge protection and industrial switchgear safeguard equipment from lightning and voltage spikes.',
-      downtimeReduction: 'Automatic pump rotation spreads operating hours evenly, preventing bearing seizure from prolonged inactivity.',
-      energyEfficiency: 'VFD motor speed regulation yields substantial energy savings compared to mechanical throttling valves.'
+      machineControl: 'Automatic multi-pump lead/lag alternation to balance wear',
+      productivity: 'Unattended continuous 24/7 pumping operation',
+      monitoring: 'Remote GSM/GPRS telemetry and tank level reporting',
+      reliability: 'Surge protection and isolation transformers for outdoor panels',
+      downtimeReduction: 'Dry-run protection preventing pump impeller damage',
+      energyEfficiency: 'Up to 40% energy reduction using VFD pump speed control'
     },
-    recommendedComponents: ['Pump Control VFD', 'Pressure Transmitter 4-20mA', 'GSM Remote Gateway', 'DIN Rail Power Supply'],
-    imageUrl: '/images/ac_drives.jpg'
+    recommendedComponents: ['Water Dedicated VFDs', 'Submersible Level Sensors', 'Pressure Transmitters', 'Remote Access Routers'],
+    imageUrl: 'https://images.unsplash.com/photo-1581092335397-9583fe92d232?q=80&w=800&auto=format&fit=crop'
   },
   {
     id: 'material-handling',
     name: 'Material Handling & Logistics',
     slug: 'material-handling',
     iconName: 'Truck',
-    description: 'Automated warehouses, sorting systems, overhead cranes, hoists, and AGVs.',
+    description: 'Automated warehouse conveyors, palletizers, overhead cranes, and sorter control panels.',
     automationBenefits: {
-      machineControl: 'Smooth acceleration and deceleration ramps prevent load swing on cranes and conveyor transfer units.',
-      productivity: 'Fast package scanning and automated diverter gates speed up distribution logistics sorting.',
-      monitoring: 'Real-time conveyor section occupancy display and emergency stop loop status monitoring.',
-      reliability: 'Heavy-duty optical sensors with long sensing distance and high ambient light immunity.',
-      downtimeReduction: 'Quick disconnect connectors allow field replacing damaged sensors without control panel rewiring.',
-      energyEfficiency: 'Braking energy regeneration and sleep modes during conveyor low-traffic intervals.'
+      machineControl: 'Smooth crane travel and hoist acceleration without load swing',
+      productivity: 'Automated package sorting at high belt speeds',
+      monitoring: 'Pallet position tracking via photoelectric sensor arrays',
+      reliability: 'Heavy-duty limit switches and brake motor controllers',
+      downtimeReduction: 'Modular terminal blocks for fast field cable replacement',
+      energyEfficiency: 'Braking resistor energy absorption on crane hoists'
     },
-    recommendedComponents: ['Long-Distance Photoelectric Sensor', 'Crane Duty VFD', 'Safety Relay Module', 'Wireless I/O Module'],
-    imageUrl: '/images/industrial_sensors.jpg'
+    recommendedComponents: ['Heavy-Duty VFDs', 'Crane Brake Resistors', 'Photoelectric Arrays', 'Limit Switches'],
+    imageUrl: 'https://images.unsplash.com/photo-1581093458791-9f3c3900df4b?q=80&w=800&auto=format&fit=crop'
   },
   {
     id: 'machine-building',
-    name: 'Machine Building (OEMs)',
+    name: 'Special Purpose Machine (SPM) Building',
     slug: 'machine-building',
-    iconName: 'Wrench',
-    description: 'Special Purpose Machines (SPM), hydraulic presses, plastic injection molding, and assembly machine OEMs.',
+    iconName: 'Cpu',
+    description: 'Custom automation hardware kits for machine OEMs developing specialized drilling, tapping, welding, or assembly SPM rigs.',
     automationBenefits: {
-      machineControl: 'Complete integrated automation architecture from PLC, HMI, VFD to servo motion.',
-      productivity: 'High-speed I/O response time permits precise part placement and rapid hydraulic valve actuation.',
-      monitoring: 'Customized HMI screens displaying machine cycle times, part counter, and operational setup guides.',
-      reliability: 'Standardized global brand components ensure international machine export compliance and spare parts availability.',
-      downtimeReduction: 'Comprehensive fault code display directly pinpoints malfunctioning switches or over-current conditions.',
-      energyEfficiency: 'Servo-driven hydraulic pumps draw power only when pressure output is actively required.'
+      machineControl: 'Custom multi-axis sequence programming via ladder logic',
+      productivity: 'Reduced cycle times compared to manual jigs',
+      monitoring: 'Operator safety light curtain interlocking',
+      reliability: 'Tested component compatibility across PLC, Servo & HMI',
+      downtimeReduction: 'Structured wiring and clear panel labeling',
+      energyEfficiency: 'High-efficiency 24V DC SMPS power units'
     },
-    recommendedComponents: ['Compact Controller PLC', 'High-Res Touch Panel', 'AC Servo Set', 'Solid State Relays'],
-    imageUrl: '/images/servo_motors.jpg'
+    recommendedComponents: ['SPM Controller Bundles', 'Servo Drives', 'Safety Light Curtains', 'Operator Push Buttons'],
+    imageUrl: 'https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?q=80&w=800&auto=format&fit=crop'
   },
   {
     id: 'process-industries',
-    name: 'Process Industries (Chemical & Pharma)',
+    name: 'Chemical & Process Industries',
     slug: 'process-industries',
     iconName: 'FlaskConical',
-    description: 'Chemical reactors, pharmaceutical batching, boiler control, and environmental scrubbers.',
+    description: 'Hazardous area sensors, valve actuators, batch controllers, and explosion-proof panel components for process plants.',
     automationBenefits: {
-      machineControl: 'Multi-loop PID temperature, pressure, and flow control maintaining tight process tolerances.',
-      productivity: 'Automated sequential batching minimizes human error in chemical ingredient proportioning.',
-      monitoring: 'Historical data logging and trend display on HMI touch screens for audit trail compliance.',
-      reliability: 'Intrinsic safety barriers and robust switchgear protect control panels in hazardous area zones.',
-      downtimeReduction: 'Self-diagnostic sensor loops flag out-of-spec calibration before batch corruption occurs.',
-      energyEfficiency: 'Modulated burner fan VFD drives optimize combustion air-to-fuel ratios for fuel conservation.'
+      machineControl: 'Precise chemical dosing valve control via 4-20mA signals',
+      productivity: 'Automated batch recipe control minimizing human error',
+      monitoring: 'Intrinsic safety barrier signal isolation for hazardous zones',
+      reliability: 'Robust corrosion-resistant sensor bodies',
+      downtimeReduction: 'Self-monitoring smart transmitters with HART protocol',
+      energyEfficiency: 'Variable speed agitator and mixer drive control'
     },
-    recommendedComponents: ['Process Control PLC', 'PID Loop Controllers', 'IS Barrier Modules', 'Signal Isolators'],
-    imageUrl: '/images/plc_controllers.jpg'
+    recommendedComponents: ['4-20mA Analog Signal Isolators', 'Process Controllers', 'Intrinsically Safe Barriers', 'Managed Switches'],
+    imageUrl: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=800&auto=format&fit=crop'
   }
 ];

@@ -14,7 +14,7 @@ export const SOLUTIONS_DATA: IndustrialSolution[] = [
       'Flexible recipe management via HMI touch screen',
       'Reduced wiring complexity with industrial bus communication'
     ],
-    imageUrl: '/images/hero_automation.jpg'
+    imageUrl: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=800&auto=format&fit=crop'
   },
   {
     id: 'factory-automation',
@@ -29,7 +29,7 @@ export const SOLUTIONS_DATA: IndustrialSolution[] = [
       'Early fault diagnostic alerts reducing line downtime',
       'Scalable architecture for future production line expansion'
     ],
-    imageUrl: '/images/hero_automation.jpg'
+    imageUrl: 'https://images.unsplash.com/photo-1581092160607-ee22621dd758?q=80&w=800&auto=format&fit=crop'
   },
   {
     id: 'motor-control',
@@ -38,117 +38,117 @@ export const SOLUTIONS_DATA: IndustrialSolution[] = [
     iconName: 'Zap',
     requirement: 'Protecting induction motors from overload, single-phasing, phase reversal, and starting stress in heavy manufacturing plants.',
     recommendedApproach: 'Utilize Motor Protection Circuit Breakers (MPCB), heavy-duty magnetic contactors, electronic overload relays, and soft starters for smooth mechanical ramp up.',
-    relevantProducts: ['Heavy-Duty Magnetic Contactor', 'Thermal & Electronic Overload Relay', 'Motor Circuit Breaker (MPCB)', 'Digital Soft Starter'],
+    relevantProducts: ['Motor Protection Circuit Breaker', 'Heavy-Duty Magnetic Contactor', 'Thermal Overload Relay', 'DIN-Rail 24V SMPS'],
     keyBenefits: [
-      'Extended motor operating life by eliminating mechanical shock',
-      'Precise thermal protection against electrical imbalances',
-      'Compliance with international panel safety standards'
+      'Prevents expensive motor winding burnout accidents',
+      'Smooth mechanical starting reducing gear wear',
+      'Compact panel footprint with comb busbar accessories'
     ],
-    imageUrl: '/images/power_supplies.jpg'
+    imageUrl: 'https://images.unsplash.com/photo-1581092446327-9b52bd658932?q=80&w=800&auto=format&fit=crop'
   },
   {
     id: 'plc-automation',
-    title: 'PLC Automation Programming & Hardware',
+    title: 'PLC Automation & Logic Control',
     slug: 'plc-automation',
-    iconName: 'Binary',
-    requirement: 'Upgrading legacy relay-based control panels to modern programmable controllers for complex logic, timing, and process sequencing.',
-    recommendedApproach: 'Select appropriately sized CPU units (micro or modular), add analog I/O expansion modules for temperature/pressure loop control, and configure ladder logic.',
-    relevantProducts: ['Programmable Logic Controllers', 'Analog Expansion Cards', 'Thermocouple Signal Conditioners'],
+    iconName: 'Settings',
+    requirement: 'Upgrading relay-based control panels to programmable logic controllers for automated sequencing and error logging.',
+    recommendedApproach: 'Replace hardwired relay logic with micro/modular PLCs, digital IO expansion units, and analog temperature/pressure inputs.',
+    relevantProducts: ['Micro Modular PLC', 'Transistor Output Cards', 'Analog Input Module', 'Shielded Signal Cables'],
     keyBenefits: [
-      'Elimination of physical relay clutter inside control panels',
-      'Quick logic modifications without re-wiring hardware',
-      'Integrated diagnostics with LED state indication'
+      'Eliminates hundreds of control relays and panel wires',
+      'Instant program modifications without rewiring',
+      'Built-in real-time clock and counter functions'
     ],
-    imageUrl: '/images/plc_controllers.jpg'
+    imageUrl: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=800&auto=format&fit=crop'
   },
   {
     id: 'vfd-applications',
-    title: 'VFD & Variable Speed Drives',
+    title: 'VFD Speed & Torque Control',
     slug: 'vfd-applications',
-    iconName: 'Gauge',
-    requirement: 'Varying process motor speed for fans, extruders, mixers, and rollers while optimizing electrical power consumption.',
-    recommendedApproach: 'Sizing sensorless vector AC drives based on motor full-load current (FLA), duty cycle, ambient temperature, and brake resistor braking requirements.',
-    relevantProducts: ['Heavy-Duty AC VFD Drive', 'Dynamic Braking Resistor', 'AC Input Line Reactor'],
+    iconName: 'Activity',
+    requirement: 'Controlling speed on conveyors, extruders, fans, and mixers to conserve electrical energy and prevent mechanical strain.',
+    recommendedApproach: 'Install sensorless vector VFDs with built-in EMC filters, braking choppers, and Modbus/PROFINET communication cards.',
+    relevantProducts: ['Heavy-Duty Vector VFD', 'Dynamic Braking Resistor', 'Line Reactor', 'Shielded Motor Cable'],
     keyBenefits: [
-      'Up to 30-50% energy savings on centrifugal fan & pump loads',
-      'Smooth speed regulation with wide frequency range',
-      'Protection against overvoltage, undervoltage, and stall'
+      'Significant electrical power savings on variable load equipment',
+      'Precise speed adjustment matching production rate changes',
+      'Soft start/stop preventing mechanical shock'
     ],
-    imageUrl: '/images/ac_drives.jpg'
+    imageUrl: 'https://images.unsplash.com/photo-1581092335397-9583fe92d232?q=80&w=800&auto=format&fit=crop'
   },
   {
     id: 'control-panel-solutions',
     title: 'Control Panel Component Sourcing',
     slug: 'control-panel-solutions',
-    iconName: 'Sliders',
-    requirement: 'Panel builders and system integrators need quick sourcing of reliable, neatly rated DIN rail components for custom electrical enclosures.',
-    recommendedApproach: 'Provide comprehensive component BOM packages including 24V DC power supplies, DIN terminal blocks, push buttons, indicators, and wire ducting.',
-    relevantProducts: ['24V DC DIN Rail Power Supply', 'Screw/Spring Terminal Blocks', '22mm LED Indicator Pilot Lamps', 'Wiring Ducts'],
+    iconName: 'ShieldCheck',
+    requirement: 'Panel fabricators require standardized, high-quality switchgear, terminals, power units, and wire management products.',
+    recommendedApproach: 'Source pre-qualified DIN-rail SMPS power units, push buttons, indicators, disconnect switches, and cage-clamp terminal blocks.',
+    relevantProducts: ['24V DC DIN SMPS', 'LED Push Button Units', 'Terminal Blocks', 'Wire Ducts & DIN Rail'],
     keyBenefits: [
-      'Single-source procurement saving sourcing lead time',
-      'Standardized DIN rail mounting dimensions',
-      'Consistent aesthetics and wiring organization'
+      'Fast electrical cabinet assembly and neat wire layout',
+      'High insulation voltage and vibration-proof clamps',
+      'Compliance with standard industrial panel panel building'
     ],
-    imageUrl: '/images/power_supplies.jpg'
+    imageUrl: 'https://images.unsplash.com/photo-1581092162384-8987c1d64718?q=80&w=800&auto=format&fit=crop'
   },
   {
     id: 'conveyor-automation',
     title: 'Conveyor & Material Handling Automation',
     slug: 'conveyor-automation',
     iconName: 'Truck',
-    requirement: 'Managing belt speed, package indexing, sorting gates, emergency stop lanyard lines, and jam detection on busy conveyor belts.',
-    recommendedApproach: 'Combine AC drives for smooth conveyor speed tuning, photoelectric sensors for package presence detection, and safety relay modules for E-stop loops.',
-    relevantProducts: ['Micro AC Drive 0.75kW', 'Retro-Reflective Photoelectric Sensor', 'Industrial Safety Relay Module'],
+    requirement: 'Automating package detection, sorting, acceleration, and emergency stop circuits along material transfer conveyors.',
+    recommendedApproach: 'Combine photoelectric sensors, inductive proximity switches, VFD speed controllers, and emergency stop pull cord switches.',
+    relevantProducts: ['Photoelectric Retro-Reflective Sensor', 'Compact Micro VFD', 'Safety Relay Unit', 'Inductive Proximity Sensor'],
     keyBenefits: [
-      'Prevent material damage with soft starting and stopping',
-      'Automated sorting triggers without manual intervention',
-      'Immediate safety tripping on emergency line pull'
+      'Automated product tracking and sorting without jam-ups',
+      'Adjustable belt speeds depending on line demand',
+      'Safety compliant emergency stop loop'
     ],
-    imageUrl: '/images/industrial_sensors.jpg'
+    imageUrl: 'https://images.unsplash.com/photo-1581093458791-9f3c3900df4b?q=80&w=800&auto=format&fit=crop'
   },
   {
     id: 'pump-motor-applications',
-    title: 'Pump & Compressor Speed Control',
+    title: 'Pump & Blower Control Systems',
     slug: 'pump-motor-applications',
-    iconName: 'Activity',
-    requirement: 'Constant pressure or flow control for industrial water supply, chemical dosing pumps, and air compressor systems.',
-    recommendedApproach: 'Use AC drives with built-in PID control feedback, connected to 4-20mA pressure transmitters to automatically throttle pump speed according to fluid demand.',
-    relevantProducts: ['Pumping Dedicated VFD', 'Industrial Pressure Transmitter 0-10 Bar', 'Analog Signal Isolator'],
+    iconName: 'Droplet',
+    requirement: 'Maintaining constant water pressure or air airflow in municipal, HVAC, and industrial processing systems.',
+    recommendedApproach: 'Use pressure transmitters with PID loop-enabled AC drives for automatic multi-pump staging and sleep mode operation.',
+    relevantProducts: ['Water-Proof Pressure Transmitter', 'HVAC Dedicated VFD', 'Digital Panel Meter', 'Flow Sensor'],
     keyBenefits: [
-      'Eliminate water hammer damage in pipe networks',
-      'Automatic sleep/wake mode during low demand periods',
-      'Substantial reduction in electricity peak demand charges'
+      'Constant pressure regulation without water hammer effect',
+      'Automatic sleep/wake mode saving night-time energy',
+      'Pump alternation extending motor life'
     ],
-    imageUrl: '/images/ac_drives.jpg'
+    imageUrl: 'https://images.unsplash.com/photo-1581092335397-9583fe92d232?q=80&w=800&auto=format&fit=crop'
   },
   {
-    id: 'cnc-machine-automation',
-    title: 'CNC & Multi-Axis Motion Control',
-    slug: 'cnc-machine-automation',
-    iconName: 'Compass',
-    requirement: 'Milling, turning, routing, and plasma cutting machines requiring smooth multi-axis coordinated linear and circular interpolation.',
-    recommendedApproach: 'Equip CNC controllers with high-resolution absolute encoder servo motors, manual pulse generators (MPG handwheels), and limit switches.',
-    relevantProducts: ['4-Axis Motion Controller', 'Absolute Encoder Servo Motor', 'Optical Handwheel MPG'],
+    id: 'cnc-automation',
+    title: 'CNC & Motion Control Solutions',
+    slug: 'cnc-automation',
+    iconName: 'Radio',
+    requirement: 'High-speed multi-axis interpolation for CNC milling, wood carving, glass cutting, and robotic pick-and-place arms.',
+    recommendedApproach: 'Deploy digital AC servo drives with 23-bit optical encoders, combined with CNC motion controller cards and manual pulse generators (MPG).',
+    relevantProducts: ['23-bit Optical Servo Motor Set', 'Multi-Axis CNC Motion Board', 'Handheld MPG Wheel', 'High-Flex Servo Cables'],
     keyBenefits: [
-      'Micron-level positioning accuracy and surface finish quality',
-      'Zero position loss upon machine power restart',
-      'Manual jog wheel for precise tool zero setting'
+      'Sub-micron positioning precision for high-surface finish',
+      'High-speed encoder feedback avoiding step loss',
+      'Vibration suppression filters during rapid axis deceleration'
     ],
-    imageUrl: '/images/servo_motors.jpg'
+    imageUrl: 'https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?q=80&w=800&auto=format&fit=crop'
   },
   {
     id: 'industrial-control-systems',
-    title: 'Industrial Control Systems & Retrofits',
+    title: 'Industrial Supervisory Systems',
     slug: 'industrial-control-systems',
-    iconName: 'Settings',
-    requirement: 'Restoring aging machinery with hard-to-find obsolete parts by retrofitting with modern, readily available automation controllers.',
-    recommendedApproach: 'Conduct IO audit, map existing wiring signals to modern PLC I/O, replace relay logic with programmable code, and install modern HMI operator screens.',
-    relevantProducts: ['Compact PLC CPU', '7 Inch Touch Panel HMI', 'DIN Rail 24V SMPS', 'Inductive Sensors'],
+    iconName: 'Layers',
+    requirement: 'Consolidating operational data from multiple machines into plant SCADA systems for process logging and remote technical support.',
+    recommendedApproach: 'Deploy Industrial IoT gateways, Ethernet switches, and multi-protocol HMIs supporting Modbus TCP, PROFINET, and MQTT.',
+    relevantProducts: ['IoT Remote Access Gateway', 'Managed Industrial Switch', 'SCADA HMI Touch Screen', 'RS485 Serial Converter'],
     keyBenefits: [
-      'Extends asset lifespan without high new machine capital cost',
-      'Readily available off-the-shelf spare parts replacement',
-      'Enhanced operator diagnostic screens'
+      'Secure remote diagnostic access reducing technical site visits',
+      'Historical alarm logging and trend recording',
+      'Seamless connectivity to MES and ERP databases'
     ],
-    imageUrl: '/images/hmi_panel.jpg'
+    imageUrl: 'https://images.unsplash.com/photo-1581092160607-ee22621dd758?q=80&w=800&auto=format&fit=crop'
   }
 ];
