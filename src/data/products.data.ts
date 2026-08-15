@@ -32,7 +32,7 @@ export const PRODUCTS_DATA: Product[] = [
       { id: 'v1', name: 'DC/DC/DC (Transistor Output)', specSummary: '24V DC supply, 24V DC inputs, 24V DC transistor outputs', partNumber: '6ES7214-1AG40-0XB0' },
       { id: 'v2', name: 'AC/DC/Relay (Relay Output)', specSummary: '120/230V AC supply, 24V DC inputs, Relay outputs (2A)', partNumber: '6ES7214-1BG40-0XB0' }
     ],
-    imageUrl: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=800&auto=format&fit=crop',
+    imageUrl: '/images/plc_controllers.jpg',
     isFeatured: true,
     priceEstimate: 'Contact for B2B Pricing',
     availability: 'In Stock'
@@ -65,7 +65,7 @@ export const PRODUCTS_DATA: Product[] = [
       { id: 'fx5u-relay', name: 'FX5U-32MR/ES (Relay)', specSummary: 'AC Supply, Relay Output', partNumber: 'FX5U-32MR/ES' },
       { id: 'fx5u-transistor', name: 'FX5U-32MT/ESS (Transistor)', specSummary: 'AC Supply, Source Transistor Output', partNumber: 'FX5U-32MT/ESS' }
     ],
-    imageUrl: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=800&auto=format&fit=crop',
+    imageUrl: '/images/plc_controllers.jpg',
     isFeatured: true,
     priceEstimate: 'Contact for B2B Pricing',
     availability: 'In Stock'
@@ -101,7 +101,7 @@ export const PRODUCTS_DATA: Product[] = [
       { id: 'ktp700-pn', name: 'KTP700 Basic PN', specSummary: 'PROFINET RJ45 Interface', partNumber: '6AV2123-2GB03-0AX0' },
       { id: 'ktp700-dp', name: 'KTP700 Basic DP', specSummary: 'PROFIBUS RS422/RS485 Interface', partNumber: '6AV2123-2GA03-0AX0' }
     ],
-    imageUrl: 'https://images.unsplash.com/photo-1581092160607-ee22621dd758?q=80&w=800&auto=format&fit=crop',
+    imageUrl: '/images/hmi_panel.jpg',
     isFeatured: true,
     priceEstimate: 'Contact for B2B Pricing',
     availability: 'In Stock'
@@ -133,7 +133,7 @@ export const PRODUCTS_DATA: Product[] = [
       { id: 'dop107bv', name: 'DOP-107BV (Standard)', specSummary: '1 RS-232 / 1 RS-485, USB Slave/Host', partNumber: 'DOP-107BV' },
       { id: 'dop107ev', name: 'DOP-107EV (Ethernet)', specSummary: 'Includes 10/100 Ethernet Port', partNumber: 'DOP-107EV' }
     ],
-    imageUrl: 'https://images.unsplash.com/photo-1581092160607-ee22621dd758?q=80&w=800&auto=format&fit=crop',
+    imageUrl: '/images/hmi_panel.jpg',
     isFeatured: false,
     priceEstimate: 'Contact for B2B Pricing',
     availability: 'In Stock'
@@ -169,7 +169,7 @@ export const PRODUCTS_DATA: Product[] = [
       { id: 'g120c-3kw', name: '3.0 kW (4.0 HP)', specSummary: '3-Phase 400V, PROFINET', partNumber: '6SL3210-1KE17-3AF1' },
       { id: 'g120c-75kw', name: '7.5 kW (10.0 HP)', specSummary: '3-Phase 400V, PROFINET', partNumber: '6SL3210-1KE21-7AF1' }
     ],
-    imageUrl: 'https://images.unsplash.com/photo-1581092335397-9583fe92d232?q=80&w=800&auto=format&fit=crop',
+    imageUrl: '/images/ac_drives.jpg',
     isFeatured: true,
     priceEstimate: 'Contact for B2B Pricing',
     availability: 'In Stock'
@@ -201,7 +201,7 @@ export const PRODUCTS_DATA: Product[] = [
       { id: 'ms300-15kw', name: '1.5 kW 460V 3-Phase', specSummary: 'Compact Frame A', partNumber: 'VFD4A2MS43ANSAA' },
       { id: 'ms300-37kw', name: '3.7 kW 460V 3-Phase', specSummary: 'Compact Frame B', partNumber: 'VFD7A5MS43ANSAA' }
     ],
-    imageUrl: 'https://images.unsplash.com/photo-1581092335397-9583fe92d232?q=80&w=800&auto=format&fit=crop',
+    imageUrl: '/images/ac_drives.jpg',
     isFeatured: false,
     priceEstimate: 'Contact for B2B Pricing',
     availability: 'In Stock'
@@ -236,7 +236,7 @@ export const PRODUCTS_DATA: Product[] = [
       { id: 'a6-400w', name: '400W Set (Keyway & Oil Seal)', specSummary: '1.27 Nm, 3000 RPM, 200V', partNumber: 'MSMF042L1U2M' },
       { id: 'a6-750w', name: '750W Set (Keyway & Oil Seal)', specSummary: '2.39 Nm, 3000 RPM, 200V', partNumber: 'MSMF082L1U2M' }
     ],
-    imageUrl: 'https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?q=80&w=800&auto=format&fit=crop',
+    imageUrl: '/images/servo_motors.jpg',
     isFeatured: true,
     priceEstimate: 'Contact for B2B Pricing',
     availability: 'In Stock'
@@ -271,7 +271,7 @@ export const PRODUCTS_DATA: Product[] = [
       { id: 'm12-pnp-no', name: 'M12 Flush PNP NO (2m Cable)', specSummary: '4mm sensing, PNP NO', partNumber: 'E2B-M12KS04-WP-B1 2M' },
       { id: 'm18-pnp-no', name: 'M18 Flush PNP NO (2m Cable)', specSummary: '8mm sensing, PNP NO', partNumber: 'E2B-M18KS08-WP-B1 2M' }
     ],
-    imageUrl: 'https://images.unsplash.com/photo-1581093458791-9f3c3900df4b?q=80&w=800&auto=format&fit=crop',
+    imageUrl: '/images/industrial_sensors.jpg',
     isFeatured: true,
     priceEstimate: 'Contact for B2B Pricing',
     availability: 'In Stock'
@@ -305,7 +305,7 @@ export const PRODUCTS_DATA: Product[] = [
       { id: 'hdr-60-24', name: '24V 2.5A (60W)', specSummary: '24V DC Output, 52.5mm width', partNumber: 'HDR-60-24' },
       { id: 'hdr-100-24', name: '24V 4.2A (100W)', specSummary: '24V DC Output, 70mm width', partNumber: 'HDR-100-24' }
     ],
-    imageUrl: 'https://images.unsplash.com/photo-1581092446327-9b52bd658932?q=80&w=800&auto=format&fit=crop',
+    imageUrl: '/images/power_supplies.jpg',
     isFeatured: true,
     priceEstimate: 'Contact for B2B Pricing',
     availability: 'In Stock'

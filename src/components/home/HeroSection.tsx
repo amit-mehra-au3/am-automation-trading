@@ -113,7 +113,7 @@ export const HeroSection: React.FC<HeroProps> = ({ setActiveTab }) => {
           <div className="lg:col-span-5 relative">
             <div className="relative rounded-2xl overflow-hidden border border-slate-800 bg-slate-900 shadow-2xl group">
               <img
-                src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=1200&auto=format&fit=crop"
+                src={getImageUrl('/images/hero_automation.jpg')}
                 alt="AM Automation Trading Industrial Automation Control Panel"
                 className="w-full h-[380px] sm:h-[440px] object-cover group-hover:scale-105 transition-transform duration-500"
               />

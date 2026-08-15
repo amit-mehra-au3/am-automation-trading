@@ -71,23 +71,25 @@ export const Navbar: React.FC<NavbarProps> = ({ activeTab, setActiveTab }) => {
               <span>{currentUser ? currentUser.companyName : 'Client Portal'}</span>
             </button>
 
-            {/* Direct Admin Portal link badge */}
-            <button
-              onClick={() => handleNavClick('admin')}
-              className={`px-2.5 py-0.5 rounded text-[11px] font-semibold border transition-all flex items-center gap-1.5 ${
-                activeTab === 'admin'
-                  ? 'bg-blue-600 text-white border-blue-500'
-                  : 'bg-slate-800 hover:bg-slate-700 text-slate-300 border-slate-700'
-              }`}
-            >
-              <Cpu className="w-3 h-3 text-blue-400" />
-              <span>Admin Portal</span>
-              {newLeadsCount > 0 && (
-                <span className="px-1.5 py-0.2 bg-emerald-500 text-slate-950 font-bold text-[10px] rounded-full animate-pulse">
-                  {newLeadsCount} New
-                </span>
-              )}
-            </button>
+            {/* Direct Admin Portal link badge (Hidden when client is logged in) */}
+            {!currentUser && (
+              <button
+                onClick={() => handleNavClick('admin')}
+                className={`px-2.5 py-0.5 rounded text-[11px] font-semibold border transition-all flex items-center gap-1.5 ${
+                  activeTab === 'admin'
+                    ? 'bg-blue-600 text-white border-blue-500'
+                    : 'bg-slate-800 hover:bg-slate-700 text-slate-300 border-slate-700'
+                }`}
+              >
+                <Cpu className="w-3 h-3 text-blue-400" />
+                <span>Admin Portal</span>
+                {newLeadsCount > 0 && (
+                  <span className="px-1.5 py-0.2 bg-emerald-500 text-slate-950 font-bold text-[10px] rounded-full animate-pulse">
+                    {newLeadsCount} New
+                  </span>
+                )}
+              </button>
+            )}
 
             {/* Quick WhatsApp Link */}
             <a

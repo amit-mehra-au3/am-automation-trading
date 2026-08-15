@@ -2,12 +2,15 @@ import React from 'react';
 import { Cpu, Phone, Mail, MapPin, Clock, ArrowUpRight, ShieldCheck, MessageSquare } from 'lucide-react';
 import { COMPANY_CONFIG } from '../../config/company.config';
 import { CATEGORIES_DATA } from '../../data/categories.data';
+import { useClientAuth } from '../../context/ClientAuthContext';
 
 interface FooterProps {
   setActiveTab: (tab: string) => void;
 }
 
 export const Footer: React.FC<FooterProps> = ({ setActiveTab }) => {
+  const { currentUser } = useClientAuth();
+
   const handleLinkClick = (id: string) => {
     setActiveTab(id);
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -121,11 +124,13 @@ export const Footer: React.FC<FooterProps> = ({ setActiveTab }) => {
                 Contact Us
               </button>
             </li>
-            <li>
-              <button onClick={() => handleLinkClick('admin')} className="hover:text-amber-400 transition-colors text-amber-400/80 font-medium">
-                Admin Lead Management
-              </button>
-            </li>
+            {!currentUser && (
+              <li>
+                <button onClick={() => handleLinkClick('admin')} className="hover:text-amber-400 transition-colors text-amber-400/80 font-medium">
+                  Admin Lead Management
+                </button>
+              </li>
+            )}
           </ul>
         </div>
 

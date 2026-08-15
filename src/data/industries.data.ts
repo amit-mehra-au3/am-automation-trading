@@ -16,7 +16,7 @@ export const INDUSTRIES_DATA: IndustrySector[] = [
       energyEfficiency: 'AC drive control on variable-load production machinery'
     },
     recommendedComponents: ['Modular PLC Systems', 'AC Drives / VFDs', 'Industrial Touch HMIs', 'Motor Switchgear', 'Proximity Sensors'],
-    imageUrl: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=800&auto=format&fit=crop'
+    imageUrl: '/images/hero_automation.jpg'
   },
   {
     id: 'automotive',
@@ -33,7 +33,7 @@ export const INDUSTRIES_DATA: IndustrySector[] = [
       energyEfficiency: 'Regenerative braking energy utilization on high-speed axes'
     },
     recommendedComponents: ['Precision Servo Motors & Drives', 'Photoelectric Sensors', 'PROFINET Remote I/O', 'Safety Relays'],
-    imageUrl: 'https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?q=80&w=800&auto=format&fit=crop'
+    imageUrl: '/images/servo_motors.jpg'
   },
   {
     id: 'packaging',
@@ -50,7 +50,7 @@ export const INDUSTRIES_DATA: IndustrySector[] = [
       energyEfficiency: 'Energy-optimized VFD speed control on conveyor belts'
     },
     recommendedComponents: ['High-Speed Transistor Output PLC', 'Color Mark Registration Sensor', 'AC Servo Systems', 'Touch Screens'],
-    imageUrl: 'https://images.unsplash.com/photo-1581092160607-ee22621dd758?q=80&w=800&auto=format&fit=crop'
+    imageUrl: '/images/hmi_panel.jpg'
   },
   {
     id: 'textile',
@@ -67,7 +67,7 @@ export const INDUSTRIES_DATA: IndustrySector[] = [
       energyEfficiency: 'Massive electricity savings on stenter fan and pump drives'
     },
     recommendedComponents: ['Vector Control AC Drives', 'Yarn Breakage Sensors', 'Temperature Controllers', '24V DC Power Units'],
-    imageUrl: 'https://images.unsplash.com/photo-1581092335397-9583fe92d232?q=80&w=800&auto=format&fit=crop'
+    imageUrl: '/images/ac_drives.jpg'
   },
   {
     id: 'food-processing',
@@ -84,7 +84,7 @@ export const INDUSTRIES_DATA: IndustrySector[] = [
       energyEfficiency: 'PID speed regulation on refrigeration and mixing pumps'
     },
     recommendedComponents: ['Stainless Steel Sensors', 'PID Temperature Modules', 'Washdown VFDs', 'IP66 Touch HMIs'],
-    imageUrl: 'https://images.unsplash.com/photo-1581093458791-9f3c3900df4b?q=80&w=800&auto=format&fit=crop'
+    imageUrl: '/images/industrial_sensors.jpg'
   },
   {
     id: 'water-wastewater',
@@ -101,7 +101,7 @@ export const INDUSTRIES_DATA: IndustrySector[] = [
       energyEfficiency: 'Up to 40% energy reduction using VFD pump speed control'
     },
     recommendedComponents: ['Water Dedicated VFDs', 'Submersible Level Sensors', 'Pressure Transmitters', 'Remote Access Routers'],
-    imageUrl: 'https://images.unsplash.com/photo-1581092335397-9583fe92d232?q=80&w=800&auto=format&fit=crop'
+    imageUrl: '/images/ac_drives.jpg'
   },
   {
     id: 'material-handling',
@@ -118,7 +118,7 @@ export const INDUSTRIES_DATA: IndustrySector[] = [
       energyEfficiency: 'Braking resistor energy absorption on crane hoists'
     },
     recommendedComponents: ['Heavy-Duty VFDs', 'Crane Brake Resistors', 'Photoelectric Arrays', 'Limit Switches'],
-    imageUrl: 'https://images.unsplash.com/photo-1581093458791-9f3c3900df4b?q=80&w=800&auto=format&fit=crop'
+    imageUrl: '/images/industrial_sensors.jpg'
   },
   {
     id: 'machine-building',
@@ -135,7 +135,7 @@ export const INDUSTRIES_DATA: IndustrySector[] = [
       energyEfficiency: 'High-efficiency 24V DC SMPS power units'
     },
     recommendedComponents: ['SPM Controller Bundles', 'Servo Drives', 'Safety Light Curtains', 'Operator Push Buttons'],
-    imageUrl: 'https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?q=80&w=800&auto=format&fit=crop'
+    imageUrl: '/images/servo_motors.jpg'
   },
   {
     id: 'process-industries',
@@ -152,6 +152,6 @@ export const INDUSTRIES_DATA: IndustrySector[] = [
       energyEfficiency: 'Variable speed agitator and mixer drive control'
     },
     recommendedComponents: ['4-20mA Analog Signal Isolators', 'Process Controllers', 'Intrinsically Safe Barriers', 'Managed Switches'],
-    imageUrl: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=800&auto=format&fit=crop'
+    imageUrl: '/images/plc_controllers.jpg'
   }
 ];

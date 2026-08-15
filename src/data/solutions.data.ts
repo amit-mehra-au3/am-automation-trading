@@ -14,7 +14,7 @@ export const SOLUTIONS_DATA: IndustrialSolution[] = [
       'Flexible recipe management via HMI touch screen',
       'Reduced wiring complexity with industrial bus communication'
     ],
-    imageUrl: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=800&auto=format&fit=crop'
+    imageUrl: '/images/hero_automation.jpg'
   },
   {
     id: 'factory-automation',
@@ -29,7 +29,7 @@ export const SOLUTIONS_DATA: IndustrialSolution[] = [
       'Early fault diagnostic alerts reducing line downtime',
       'Scalable architecture for future production line expansion'
     ],
-    imageUrl: 'https://images.unsplash.com/photo-1581092160607-ee22621dd758?q=80&w=800&auto=format&fit=crop'
+    imageUrl: '/images/hero_automation.jpg'
   },
   {
     id: 'motor-control',
@@ -44,7 +44,7 @@ export const SOLUTIONS_DATA: IndustrialSolution[] = [
       'Smooth mechanical starting reducing gear wear',
       'Compact panel footprint with comb busbar accessories'
     ],
-    imageUrl: 'https://images.unsplash.com/photo-1581092446327-9b52bd658932?q=80&w=800&auto=format&fit=crop'
+    imageUrl: '/images/power_supplies.jpg'
   },
   {
     id: 'plc-automation',
@@ -59,7 +59,7 @@ export const SOLUTIONS_DATA: IndustrialSolution[] = [
       'Instant program modifications without rewiring',
       'Built-in real-time clock and counter functions'
     ],
-    imageUrl: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=800&auto=format&fit=crop'
+    imageUrl: '/images/plc_controllers.jpg'
   },
   {
     id: 'vfd-applications',
@@ -74,7 +74,7 @@ export const SOLUTIONS_DATA: IndustrialSolution[] = [
       'Precise speed adjustment matching production rate changes',
       'Soft start/stop preventing mechanical shock'
     ],
-    imageUrl: 'https://images.unsplash.com/photo-1581092335397-9583fe92d232?q=80&w=800&auto=format&fit=crop'
+    imageUrl: '/images/ac_drives.jpg'
   },
   {
     id: 'control-panel-solutions',
@@ -89,7 +89,7 @@ export const SOLUTIONS_DATA: IndustrialSolution[] = [
       'High insulation voltage and vibration-proof clamps',
       'Compliance with standard industrial panel panel building'
     ],
-    imageUrl: 'https://images.unsplash.com/photo-1581092162384-8987c1d64718?q=80&w=800&auto=format&fit=crop'
+    imageUrl: '/images/power_supplies.jpg'
   },
   {
     id: 'conveyor-automation',
@@ -104,7 +104,7 @@ export const SOLUTIONS_DATA: IndustrialSolution[] = [
       'Adjustable belt speeds depending on line demand',
       'Safety compliant emergency stop loop'
     ],
-    imageUrl: 'https://images.unsplash.com/photo-1581093458791-9f3c3900df4b?q=80&w=800&auto=format&fit=crop'
+    imageUrl: '/images/industrial_sensors.jpg'
   },
   {
     id: 'pump-motor-applications',
@@ -119,7 +119,7 @@ export const SOLUTIONS_DATA: IndustrialSolution[] = [
       'Automatic sleep/wake mode saving night-time energy',
       'Pump alternation extending motor life'
     ],
-    imageUrl: 'https://images.unsplash.com/photo-1581092335397-9583fe92d232?q=80&w=800&auto=format&fit=crop'
+    imageUrl: '/images/ac_drives.jpg'
   },
   {
     id: 'cnc-automation',
@@ -134,7 +134,7 @@ export const SOLUTIONS_DATA: IndustrialSolution[] = [
       'High-speed encoder feedback avoiding step loss',
       'Vibration suppression filters during rapid axis deceleration'
     ],
-    imageUrl: 'https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?q=80&w=800&auto=format&fit=crop'
+    imageUrl: '/images/servo_motors.jpg'
   },
   {
     id: 'industrial-control-systems',
@@ -149,6 +149,6 @@ export const SOLUTIONS_DATA: IndustrialSolution[] = [
       'Historical alarm logging and trend recording',
       'Seamless connectivity to MES and ERP databases'
     ],
-    imageUrl: 'https://images.unsplash.com/photo-1581092160607-ee22621dd758?q=80&w=800&auto=format&fit=crop'
+    imageUrl: '/images/hmi_panel.jpg'
   }
 ];
