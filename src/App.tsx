@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { ToastProvider } from './context/ToastContext';
 import { RfqProvider } from './context/RfqContext';
 import { ClientAuthProvider } from './context/ClientAuthContext';
@@ -22,10 +22,27 @@ import { TermsConditionsPage } from './pages/TermsConditions';
 import { NotFoundPage } from './pages/NotFound';
 import type { Product } from './types';
 
+const VALID_TABS = ['home', 'products', 'solutions', 'industries', 'about', 'rfq', 'contact', 'admin', 'client', 'privacy', 'terms'];
+
 export function App() {
-  const [activeTab, setActiveTab] = useState<string>('home');
+  const getHashTab = (): string => {
+    const hash = window.location.hash.replace('#', '').trim().toLowerCase();
+    return VALID_TABS.includes(hash) ? hash : 'home';
+  };
+
+  const [activeTab, setActiveTab] = useState<string>(getHashTab);
   const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
   const [selectedCategorySlug, setSelectedCategorySlug] = useState<string | undefined>(undefined);
+
+  // Synchronize browser URL hash with activeTab state & browser back/forward history
+  useEffect(() => {
+    const handleHashChange = () => {
+      const tab = getHashTab();
+      setActiveTab(tab);
+    };
+    window.addEventListener('hashchange', handleHashChange);
+    return () => window.removeEventListener('hashchange', handleHashChange);
+  }, []);
 
   const handleSelectProduct = (product: Product) => {
     setSelectedProduct(product);
@@ -35,8 +52,7 @@ export function App() {
   const handleSelectCategory = (categorySlug: string) => {
     setSelectedCategorySlug(categorySlug);
     setSelectedProduct(null);
-    setActiveTab('products');
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    handleTabChange('products');
   };
 
   const handleTabChange = (tab: string) => {
@@ -44,6 +60,16 @@ export function App() {
       setSelectedProduct(null);
     }
     setActiveTab(tab);
+
+    // Update browser address bar URL hash
+    if (tab === 'home') {
+      if (window.location.hash) {
+        history.pushState(null, '', window.location.pathname + window.location.search);
+      }
+    } else {
+      window.location.hash = `#${tab}`;
+    }
+
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
